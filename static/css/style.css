@@ -1,0 +1,135 @@
+@font-face{
+    font-family: 'AdobeDevanagari';
+    src: url('../fonts/AdobeDevanagari-Bold.otf');
+    src: url('../fonts/AdobeDevanagari-Regular.otf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    box-shadow: 0px 1px 0px #0000001A;
+}
+
+.logo {
+    width: 60px;
+    height: 56px;
+    background-color: #1082D2;
+    margin-left: 90px;
+}
+
+svg {
+    padding: 15px 16px;
+}
+
+.logo-m {
+    fill: white;
+    font-family: 'AdobeDevanagari', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    margin-top: 155px;
+}
+
+section {
+    width: 312px;
+}
+
+h1 {
+    font-family: 'AdobeDevanagari', Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    line-height: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+p, li {
+    font-family: 'AdobeDevanagari', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+input {
+    height: 40px;
+}
+
+input[type='text'] {
+    -webkit-appearance: none;
+    border-radius: 0px;
+    width: 295px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #ECECEC;
+    padding-left: 15px;
+    margin: 20px 0;
+}
+
+input[type='submit'] {
+    -webkit-appearance: none;
+    border-radius: 0px;
+    background: #1082D2 0% 0% no-repeat padding-box;
+    border: none;
+    font-family: 'AdobeDevanagari', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 23px;
+    font-weight: bold;
+    color: #fff;
+    width: 312px;
+}
+
+input[type='submit']:hover {
+    cursor: pointer;
+}
+
+.active {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    margin-top: 50px;
+}
+
+.pals-list {
+    margin-top: 30px;
+}
+
+li {
+    list-style-position: inside;
+}
+
+.number {
+    font-weight: bold;
+}
+
+@media all and (max-width: 480px) {
+    main {
+        margin-top: 110px;
+    }
+
+    .logo {
+        margin-left: 15px;
+    }
+
+    section {
+        width: 286px;
+    }
+
+    input[type='text'] {
+        width: 269px;
+        margin: 30px 0 20px 0;
+    }
+
+    input[type='submit'] {
+        width: 286px;
+    }
+
+    main > section:first-child > p {
+        width: 168px;
+    }
+}
