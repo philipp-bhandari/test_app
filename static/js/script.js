@@ -11,9 +11,11 @@ function insertData(data) {
     countPalsBlock.classList.add('active');
 
     if(countPals === 0){
-        countPalsBlock.innerText = 'Не найдено ни одного палиндрома.'
+        countPalsBlock.innerText = 'Не найдено ни одного палиндрома.';
     } else {
         countPalsBlock.innerHTML = `Найдено палиндромов: <span class="number">${countPals}</span>`;
+
+        // Создаем список и в цикле вставляем палиндромы
 
         let listItem = document.createElement('ol');
 
@@ -24,12 +26,13 @@ function insertData(data) {
         });
 
         palsListBlock.appendChild(listItem);
-
     }
 }
 
 function getData(e) {
     e.preventDefault();
+
+    // Получаем данные формы и отправляем обработчику
 
     const dataForm = new FormData(e.target),
         options = {
@@ -37,7 +40,7 @@ function getData(e) {
             body: dataForm
         };
 
-    fetch('/pals/handler.php', options)
+    fetch('/test_app/handler.php', options)
         .then(resp => {
             if(resp.ok){
                 return resp.json();
